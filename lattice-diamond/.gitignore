@@ -1,1 +1,2 @@
-work/
+work/*.rpm
+work/license.dat
