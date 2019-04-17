@@ -9,6 +9,7 @@ RUN yum update -y && \
     gamin libusb freetype fontconfig expat libX11 libxcb libXau libICE libSM \
     libuuid libXt libXext libXrender libXi libXt && \
   yum install -y perl tcsh libXft libXScrnSaver && \
+  yum install -y firefox evince && \
   yum clean all -y
 
 COPY scripts/install.sh scripts/run.sh /opt/docker-fpga/
