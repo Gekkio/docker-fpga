@@ -26,8 +26,7 @@ mounts your home directory as a volume.
 
 ### Debugging Lattice Diamond problems
 
-Run `./root.sh` to start a root bash shell. Note: any changes you do to the
-image are *not retained*.
+Run `./root.sh` to start a root bash shell.
 
 ## License
 
