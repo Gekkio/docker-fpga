@@ -7,8 +7,8 @@ FROM centos
 RUN yum update -y && \
   yum install -y glibc nss-softokn-freebl libjpeg libtiff zlib glib2 libselinux \
     gamin libusb freetype fontconfig expat libX11 libxcb libXau libICE libSM \
-    libuuid libXt libXext libXrender libXi libXt && \
-  yum install -y perl tcsh libXft libXScrnSaver && \
+    libuuid libXt libXext libXrender libXi libXft && \
+  yum install -y perl tcsh libXScrnSaver && \
   yum install -y firefox evince && \
   yum clean all -y
 
