@@ -17,7 +17,7 @@ ID=`docker run -dit -e DISPLAY="${DISPLAY}" \
 
 docker attach "${ID}"
 
-read -r -p "Commit changes to image? (type yes to continue): "
+read -r -p "Commit changes to image? (type y to continue): "
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   docker commit "${ID}" diamond:install
