@@ -21,16 +21,13 @@ installation set up for *your current user*.
 
 ### Usage
 
-Run `./run.sh` to start Lattice Diamond. The script sets up X11 forwarding and
-mounts your home directory as a volume.
+Run `./run.sh` to start Lattice Diamond. The script sets up X11 forwarding,
+mounts a persistent volume at `/home/youruser`, mounts your host-side home
+directory as a writable volume at `/home/youruser/home`.
 
 ### Debugging Lattice Diamond problems
 
 Run `./root.sh` to start a root bash shell.
-
-### Known issues
-
-* Since 3.11, opening help is no longer possible
 
 ## License
 

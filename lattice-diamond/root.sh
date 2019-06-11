@@ -7,10 +7,12 @@ MAC_ADDRESS=`cat /sys/class/net/"${NET_DEVICE}"/address`
 ID=`docker run -dit -e DISPLAY="${DISPLAY}" \
   --mac-address="${MAC_ADDRESS}" \
   --privileged --ipc host \
-  -v "${HOME}":"${HOME}" \
+  -v docker-fpga-${USER}:"${HOME}" \
   -v /etc/machine-id:/etc/machine-id \
   -v /dev/bus/usb/:/dev/bus/usb/ \
   -v /tmp/.X11-unix/:/tmp/.X11-unix \
+  -v "${HOME}":"${HOME}"/home \
+  -e MOZ_NO_REMOTE=1 \
   -u root \
   diamond:install \
   /bin/bash`
