@@ -12,4 +12,4 @@ ID=`docker run -dti \
   /opt/docker-fpga/install.sh`
 
 docker attach "${ID}"
-docker commit "${ID}" diamond:install
+docker commit "${ID}" diamond:"${USER}"

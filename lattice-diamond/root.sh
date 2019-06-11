@@ -14,7 +14,7 @@ ID=`docker run -dit -e DISPLAY="${DISPLAY}" \
   -v "${HOME}":"${HOME}"/home \
   -e MOZ_NO_REMOTE=1 \
   -u root \
-  diamond:install \
+  diamond:"${USER}" \
   /bin/bash`
 
 docker attach "${ID}"
@@ -22,5 +22,5 @@ docker attach "${ID}"
 read -r -p "Commit changes to image? (type y to continue): "
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  docker commit "${ID}" diamond:install
+  docker commit "${ID}" diamond:"${USER}"
 fi

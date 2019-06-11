@@ -15,5 +15,5 @@ docker run -it --rm -e DISPLAY="${DISPLAY}" \
   -e MOZ_NO_REMOTE=1 \
   -u "${USER}" \
   -w "${HOME}" \
-  diamond:install \
+  diamond:"${USER}" \
   /bin/bash -c /opt/docker-fpga/run.sh
