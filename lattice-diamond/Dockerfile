@@ -1,4 +1,4 @@
-FROM centos
+FROM centos:7
 
 # First yum install handles all dependencies listed in the Lattice Diamond 3.10
 # installation guide
