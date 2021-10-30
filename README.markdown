@@ -2,7 +2,7 @@
 
 ## Lattice Diamond
 
-Basic dockerization scripts for Lattice Diamond 3.12 can be found in
+Basic dockerization scripts for Lattice Diamond 3.12 SP1 can be found in
 `lattice-diamond/`.
 
 Special thanks to the author of the [Dockerized FPGA
@@ -10,13 +10,14 @@ toolchains](https://section5.ch/index.php/2017/01/20/669/) blog post.
 
 ### Initial setup
 
-1. `docker build -t diamond .`
-2. Download and copy `diamond_3_12-base-240-2-x86_64-linux.rpm` and to the
-   work folder
-3. Copy your license.dat to the work folder
-4. `./install.sh`
+1. Run `docker build -t diamond .`
+2. Download and these files into the `work` folder:
+   - `diamond_3_12-base-240-2-x86_64-linux.rpm`
+   - `diamond_3_12-sp1-454-2-x86_64-linux.rpm`
+3. Copy your license.dat to the `work` folder
+4. Run `./install.sh`
 
-This should build a docker image containing a working Lattice Diamond 3.12
+This should build a docker image containing a working Lattice Diamond 3.12 SP1
 installation set up for *your current user*.
 
 ### Usage
