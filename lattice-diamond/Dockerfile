@@ -1,4 +1,4 @@
-FROM centos:7
+FROM rockylinux:8
 
 # Source: Lattice Diamond 3.13 installation guide
 # First yum install adds all dependencies listed in the guide
