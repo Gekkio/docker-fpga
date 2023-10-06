@@ -1,6 +1,6 @@
 FROM centos:7
 
-# Source: Lattice Diamond 3.12 installation guide
+# Source: Lattice Diamond 3.13 installation guide
 # First yum install adds all dependencies listed in the guide
 # Second yum install adds all 32-bit dependencies for ModelSim listed in the guide
 # Third yum install adds all dependencies *not listed* in the guide, but which
