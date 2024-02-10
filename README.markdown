@@ -32,12 +32,12 @@ Basic dockerization scripts for Lattice iCEcube2 2020.12 can be found in `lattic
 
 1. Run `docker build -t icecube2 .`
 2. Download and copy these files into the `work` folder:
-   - `iCEcube2setup_Dec_10_2020_2012`
+   - `iCEcube2setup_Dec_10_2020_2012` (not the zip file you can download but the installer file inside it!)
 3. Copy your license.dat to the `work` folder
 4. Run `./install.sh`
 5. **Install iCEcube2 to `/opt/docker-fpga/icecube2` when prompted**. Ignore the warning about the directory already existing, skip the license file selection, and uncheck the box "Launch iCEcube2 now".
 
-This should build a docker image containing a working Lattice Diamond installation set up for *your current user*.
+This should build a docker image containing a working Lattice iCEcube2 installation set up for *your current user*.
 
 ### Usage
 
