@@ -7,6 +7,7 @@ RUN yum update -y && \
     libXcursor.i686 libXfixes.i686 libXinerama.i686 libXrandr.i686 libpng12.i686 libpng15.i686 \
     libstdc++.i686 libnsl.i686 \
     elfutils-libelf.i686 && \
+  yum install -y libnsl && \
   yum install -y perl tcsh && \
   yum install -y firefox && \
   yum clean all -y
