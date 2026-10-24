@@ -1,11 +1,16 @@
 #!/bin/bash
 set -euo pipefail
 
+PODMAN_OPTIONS=$(docker --version | grep -q ^podman && echo -n "--uidmap +$(id -u):0:1")
+
 ID=`docker run -dti -e DISPLAY="${DISPLAY}" \
+  $PODMAN_OPTIONS \
   --privileged --ipc host \
   -v "${PWD}"/work:/opt/docker-fpga/work \
   -v /etc/machine-id:/etc/machine-id \
-  -v /tmp/.X11-unix/:/tmp/.X11-unix \
+  -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+  -e XAUTHORITY=/tmp/.Xauthority \
+  -v "${XAUTHORITY:-$HOME/.Xauthority}":/tmp/.Xauthority:ro \
   -e USER_UID=$(id -u) \
   -e USER_GID=$(id -g) \
   -e USER_NAME="${USER}" \
